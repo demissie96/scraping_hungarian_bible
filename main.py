@@ -85,7 +85,6 @@ def chapters_content(book, chapter):
     for element in book_list:
         short_book_list.append(element[2])
         
-    # print(short_book_list)
     
     # To prevent page from crash
     sleep_time = random.randrange(3, 8)   
@@ -106,9 +105,6 @@ def chapters_content(book, chapter):
     # Chapter verses list of elements
     chapter_verses = chapter_body.find_all("p")
 
-
-    # print(len(chapter_verses))
-    # print(chapter_verses[0])
 
     for verse in chapter_verses:      
         
