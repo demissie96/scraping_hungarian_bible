@@ -73,6 +73,11 @@ book_list = [
     ["JUD", 1, "Júd", "Júdás"], 
     ["REV", 22, "Jel", "Jelenések"]]
 
+book_list_test = [
+    ["RUT", 4, "Ruth", "Ruth"], 
+    ["JAS", 5, "Jak", "Jakab"], 
+]
+
 
 def chapters_content(book, chapter):
     
@@ -161,7 +166,7 @@ for element in book_list:
         current_array[current_chapter] = a_whole_chapter
         current_chapter += 1
 
-    with open(f"scraped_chapters/{current_book}.json", "w", encoding='utf-8') as write_file:
+    with open(f"scraped_chapters_hu/{current_book}.json", "w", encoding='utf-8') as write_file:
         json.dump(current_array, write_file, ensure_ascii=False)
 
     print(f"*** {current_book_title} is done ***")
