@@ -1,4 +1,3 @@
-from queue import Empty
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -100,7 +99,7 @@ def chapters_content(book, chapter):
 
     # Chapter title
     chapter_title = chapter_body.find("h2").text
-    verse_list.append({"title": chapter_title})
+    verse_list.append({"num": "Title", "text_hu": chapter_title})
 
     # Chapter verses list of elements
     chapter_verses = chapter_body.find_all("p")
